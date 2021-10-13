@@ -26,9 +26,6 @@ import androidx.core.graphics.set
 
 class InverterViaThreadFragment : Fragment() {
 
-    lateinit var progressBar: ProgressBar
-    lateinit var uploadButton : Button
-    lateinit var photoView : ImageView
     lateinit var imageBitmap : Bitmap
     private var _binding : FragmentInverterViaThreadBinding? = null
     val mBinding get() = _binding!!
@@ -45,7 +42,8 @@ class InverterViaThreadFragment : Fragment() {
         _binding = FragmentInverterViaThreadBinding.inflate(layoutInflater, container, false)
 
         //mBinding.progressBar.max = imageBitmap.width *  imageBitmap.height
-
+        mBinding.back.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_inverterViaThread_to_startPage))
         mBinding.uploadButton.setOnClickListener{
             uploadImageGallery()
             //Press

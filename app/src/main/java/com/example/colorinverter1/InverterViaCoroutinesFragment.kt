@@ -17,6 +17,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.annotation.RequiresApi
 import androidx.core.graphics.set
+import androidx.navigation.Navigation
 import com.example.colorinverter1.databinding.FragmentInverterViaCoroutinesBinding
 import com.example.colorinverter1.databinding.FragmentInverterViaThreadBinding
 import kotlinx.coroutines.GlobalScope
@@ -24,9 +25,6 @@ import kotlinx.coroutines.launch
 
 class InverterViaCoroutinesFragment : Fragment() {
 
-    lateinit var progressBar: ProgressBar
-    lateinit var uploadButton : Button
-    lateinit var photoView : ImageView
     lateinit var imageBitmap : Bitmap
     private var _binding : FragmentInverterViaCoroutinesBinding? = null
     val mBinding get() = _binding!!
@@ -43,6 +41,8 @@ class InverterViaCoroutinesFragment : Fragment() {
         _binding = FragmentInverterViaCoroutinesBinding.inflate(layoutInflater, container, false)
         mBinding.uploadButton.setOnClickListener{uploadImageGallery()}
 
+        mBinding.back.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_inverterViaCoroutines_to_startPage))
         return mBinding.root
     }
 
