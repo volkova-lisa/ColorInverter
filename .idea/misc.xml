@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/stepa/AndroidStudioProjects/ColorInverter1/app/src/main/res/layout/activity_main.xml" value="0.18461539003270633" />
+        <entry key="..\:/Users/stepa/AndroidStudioProjects/ColorInverter1/app/src/main/res/layout/fragment_inverter_via_coroutines.xml" value="0.11684782608695653" />
         <entry key="..\:/Users/stepa/AndroidStudioProjects/ColorInverter1/app/src/main/res/layout/fragment_inverter_via_thread.xml" value="0.19655797101449277" />
         <entry key="..\:/Users/stepa/AndroidStudioProjects/ColorInverter1/app/src/main/res/layout/fragment_start_page.xml" value="0.1802536231884058" />
       </map>

@@ -25,6 +25,9 @@ class StartPageFragment : Fragment() {
         _binding = FragmentStartPageBinding.inflate(layoutInflater, container, false)
         mBinding.threadButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_startPage_to_inverterViaThread))
+
+        mBinding.coroutButton.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_startPage_to_inverterViaCoroutines))
         return mBinding.root
     }
 
